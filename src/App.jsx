@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -29,6 +30,8 @@ function App() {
   const [suffix, setSuffix] = useState("");
 
   const [results, setResults] = useState([]);
+
+  const tableRef = useRef(null);
 
   // ローディング状態
   const [loading, setLoading] = useState(false);
@@ -78,6 +81,13 @@ function App() {
           fileBase64: data.file, // ダウンロード用
         },
       ]);
+
+      // 結果テーブルまでスクロール
+      setTimeout(() => {
+        if (tableRef.current) {
+          tableRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
 
       // alert("ラウドネス処理が完了しました！");
     } catch (err) {
@@ -224,7 +234,7 @@ function App() {
 
       {/* 結果テーブル */}
       {results.length > 0 && (
-        <div className="lg_container bg-white p-6 rounded shadow-md mt-10">
+        <div ref={tableRef} className="lg_container bg-white p-6 rounded shadow-md mt-10">
           <h2 className="text-lg font-bold mb-4">
             <FontAwesomeIcon icon="fa-solid fa-print" className="mr-1" />
             ラウドネス処理結果
