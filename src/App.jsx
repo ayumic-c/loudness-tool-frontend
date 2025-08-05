@@ -52,7 +52,7 @@ function App() {
     });
 
     try {
-      const res = await fetch(`http://localhost:3001/process?${query.toString()}`, {
+      const res = await fetch(`http://https://loudness-tool-backend.onrender.com/process?${query.toString()}`, {
         method: "POST",
         body: formData,
       });
