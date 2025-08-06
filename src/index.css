@@ -11,7 +11,7 @@
   }
 
   .btn-colored {
-    @apply cursor-pointer rounded bg-[#9375FF] text-white transition-all hover:opacity-90;
+    @apply cursor-pointer rounded bg-[#0bbed5] text-white transition-all hover:opacity-90;
   }
 
   .form-box {

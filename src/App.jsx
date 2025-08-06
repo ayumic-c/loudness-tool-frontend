@@ -124,17 +124,19 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-6 lg:py-16">
       <div className="lg_container">
-        <h1 className="leading-none text-2xl font-bold text-center text-[#9375FF] lg:text-4xl">
+        <h1 className="leading-none text-2xl font-bold text-center text-[#0bbed5] lg:text-4xl">
           <FontAwesomeIcon icon="fa-solid fa-compact-disc" />
           ラウドネス処理ツール
         </h1>
         <p className="mt-5 mb-6 lg:mt-7 lg:mb-8">
           <strong>注意事項：</strong>
-          <br></br>
-          こちらのツールは簡易的なラウドネス処理ツールです。<br></br>
-          1分未満の音声クリエイティブであればすぐに処理できますが、Podcast音源など数十分単位の長尺音源の場合は、<br className="hidden lg:block"></br>
-          処理に時間がかかりタイムアウトする可能性があります。<br></br>
-          また、無料プランのサーバーで動作しているため、処理完了までに若干時間がかかります。（目安：30秒の音源で約20〜30秒）<br></br>
+          <br />
+          こちらのツールは簡易的なラウドネス処理ツールです。
+          <br />
+          無料プランのサーバーで動作しているため、処理完了までに時間がかかります。（目安：30秒の音源で約20〜30秒）
+          <br />
+          数分以内の音源であれば問題なく処理できますが、数十分単位の長尺音源の場合は処理に時間がかかり、タイムアウトする可能性があります。
+          <br />
           書き出しフォーマットは、現時点ではMP3のみ対応しております。
         </p>
       </div>
